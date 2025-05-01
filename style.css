@@ -1,0 +1,632 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    font-family: 'Inter', sans-serif;  
+    margin: 0;  
+}
+section{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+}
+#main{
+    background-image: url(img/bgMAIN.png);
+}
+#about{
+    background-image: url(img/bgABOUT.png);
+}
+#skills{
+    background-image: url(img/bgSKILLS.png);
+}
+#works{
+    background-image: url(img/bgWORKS.png);
+}
+#comments{
+    background-image: url(img/bgCOMMENTS.png);
+}
+.main-block,.about-block,.skills-block,.works-block,.comments-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+.main-block{
+    flex-direction: column;
+    height: 100vh;
+}
+.main-content{
+    width: 849px;
+    height: 223px;
+    background-image: url("img/form1.png");
+    background-size: cover;
+    padding-left: 100px;
+}
+.main-title{
+    color:#2B2D35;
+    font-size: 80px;
+   padding-top: 67px;
+}
+.main-subtitle{
+ font-family: "Comfortaa";
+ font-size: 20px;
+ color: #2B2D35;
+}
+.button{
+    width: 200px;
+    height: 60px;
+    border-radius: 100px;
+    border: 2px solid black;
+    background-color: #aefc07;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    box-shadow: 5px 5px 5px black;
+    text-align: center;
+}
+.button a{
+    font-size: 20px;
+    text-decoration:none;
+}
+nav{
+  position: fixed;
+  top:0;
+  width: 100%;
+  z-index: 10;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+.nav-link{
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    padding-right: 150px;
+
+}
+.link{
+    width: 112px;
+    height: 40px;
+    border-radius: 12px;
+    border:2px solid #000;
+    background-color: #FFF;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Comfortaa";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+
+}
+.navigation a {
+  font-size: 18px; 
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold; 
+  transition: color 0.3s ease; 
+}
+
+.navigation a:hover {
+  color: #d2e900; 
+}
+.button a:hover {
+  color: #000000; 
+}
+.moving-planet{
+    background-image: url(img/moving-planet.png);
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 230px;
+    transform: rotate(-15deg);
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    animation-name: planet-move;
+    animation-duration: 3s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate-reverse;
+    }
+    
+    @keyframes planet-move{
+        from{transform: translateY(0px)}
+        to{transform: translateY(70px);}
+    }
+
+    .title{
+        padding-top: 100px;
+        text-align: center;
+        color: #FFF;
+        font-size: 80px;
+        text-shadow: 5px 5px 5px black;
+    }
+    .about-content{
+        width: 50%;
+        height: 270px;
+        padding-top: 40px;
+        padding-left: 40px;
+        background-color: #792AFF;
+        position: relative;
+        display: flex;
+    }
+    .about-title{
+        color:#FFF;
+        font-size:20px;
+        max-width: 463px;
+        margin-bottom:20px;
+        font-family: 'Comfortaa';
+    }
+    .about-card{
+        background-image: url(img/form2.png);
+        width: 376px;
+        height: 346px;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 20px;
+        position: relative;
+        background-repeat: no-repeat;
+        align-items: center;
+    }
+    .about-card p{
+        color:#000;
+        font-size: 17px;
+        text-align: left;
+        padding-left:20px;
+        line-height:25px;
+        font-family: 'Comfortaa';
+    }  
+    .about-card img{
+        padding-bottom:30px;
+    
+    }
+    
+
+    .cloud{
+        background-image: url(img/cloud.png);
+        background-repeat: no-repeat;
+        width: 200px;
+        height: 230px;
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        animation-name: cloud;
+        animation-duration: 2s;
+        animation-iteration-count:infinite;
+        animation-direction:alternate;
+        }
+        
+
+    @keyframes cloud {
+        0% {transform: translateX(0px);transform: translateY(0px);}
+        25% {transform: translateY(90px);transform: translateX(0px);}
+        50% {transform: translateX(0px);transform: translateY(0px);}
+        75% {transform: translateY(0px);transform: translateX(90px);}
+        100% {transform: translateX(0px);transform: translateY(0px) ;}
+
+    }
+    .skills-card{
+        background-image: url(img/form3.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 450px;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 20px;
+        margin-top: 100px;
+        padding-left: 10px;
+        
+    }
+    .skills-card p{
+        color: #000;
+        margin-top: -50px;
+        font-size: 18px;
+        margin-bottom: 30px;
+        text-align: center;
+        max-width: 500px;
+        font-family: 'Comfortaa';
+    }
+    .moving-moon{
+        background-image: url(img/moving-planet2.png);
+        background-repeat: no-repeat;
+        width: 200px;
+        height: 208px;
+        transform: rotate(-15deg);
+        position: absolute;
+        bottom: 30px;
+        animation-name: planet-move;
+        animation-duration: 3s;
+        animation-iteration-count:infinite;
+        animation-direction:alternate-reverse;
+        }
+        
+        @keyframes planet-move{
+            from{transform: translateY(0px)}
+            to{transform: translateY(80px);}
+        }
+        .works{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        .comments-block{
+            justify-content: space-evenly;
+            max-width: 1150px;
+            margin: auto;
+        }
+        .pictures2{
+            background: url(img/card.png);
+            height: 300px;
+            width: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            flex-direction: column;
+        }
+        .pictures2 h3{
+            font-family:'Comfortaa';
+            font-size: 18px;
+            padding: 10px;
+            
+        }
+        .pictures2 p{
+            font-family: "Comfortaa";
+            font-size: 14px;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .comment-text{
+            background: url(img/comment.png);
+            width: 327px;
+            height: 161px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .comment-text p{
+            font-family: "Comfortaa";
+            font-size: 20px;
+            max-width: 250px;
+        }
+        footer{
+            background-color: #200153;
+            height: 110px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: #FFF;
+}
+        .footer-info p{
+            font-family: 'Comfortaa';
+            padding-bottom: 10px;
+
+}
+        .footer-year p{
+            font-family: 'Comfortaa';
+            letter-spacing: 1.5px;
+}
+        .footer-links a{
+            margin-right: 15px;
+}
+        .logo{
+            color: #BBFF2C;
+            font-size: 80px;
+            padding-left:50px;
+}
+        .active{
+            background-color: #BBFF2C;
+
+
+}
+
+  .nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    animation: bounce 1s;
+  }
+
+  @keyframes bounce {
+    0%   { transform: translateY(0); }
+    30%  { transform: translateY(-10px); }
+    50%  { transform: translateY(0); }
+    70%  { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+  }
+  .mobile-button{
+    display: none;
+    padding-top: 10px;
+    width: 40px;
+    position: absolute;
+    right: 20px;
+}   
+.hide,.btn-hide{
+    display: none;
+}
+
+  @media (max-width: 500px){ /* mobile adoptation */
+    .nav-link{
+        display: none;
+    }
+    .logo{
+        font-size:40px;
+        padding-left: 20px;
+        padding-top: 10px;
+    }
+    .main-content{
+        max-width: 220px;
+    }
+    .main-title{
+        padding-top: 80px;
+        font-size: 30px;
+    }
+    .main-subtitle{
+        font-size: 15px;
+    }
+    .moving-planet,.cloud,.moving-moon{
+        display: none;
+    }
+    .title{
+        font-size: 50px;
+        padding-top:30px ;
+    }
+    .about-block{
+        flex-direction: column;
+        margin-top: 20px;
+        padding: 0;
+    }
+    .about-card{
+        order: -1;
+        background-size: contain;
+        padding-top: 20px;
+        width: 326px;
+        height: 296px;
+    }
+    .about-card img{
+        width: 85%;
+
+    }
+    .about-content{
+        width: 75%;
+        height: 250px;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .about-title{
+        font-size: 18px;
+    }
+    .skills-card{
+        margin: 20px;
+        padding-left: 20px;
+        background-size: contain;
+    }
+    .skills-card p{
+        font-size:16px;
+        margin-top: 10%;
+        margin-bottom: 20px;
+
+    }
+    .skills-block{
+        min-height: 60vh;
+    }
+    .works{
+        flex-direction: column;
+        padding: 20px 0;
+    }
+    .works-block img{
+        margin: 20px 0;
+        width: 80%;
+    }
+    .comments-block{
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0 auto;
+        padding-top: 50px;
+    }
+    .comment{
+        background-image:  
+        url(img/comment-mobile.png);
+    }
+    .comment p{    
+        font-size: 15px;
+        max-width: 290px; 
+    }
+
+
+
+   footer{
+        height: 200px;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .footer-info{
+        text-align: center;
+    }
+
+
+
+    .button a {
+        font-size: 14px;
+        padding: 8px 16px;
+        border-radius: 8px;
+        text-align: center;
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+        transition: 0.3s ease;
+    }
+    .button {
+        margin-top: 15px;
+    }
+    .skills-card .button a,
+    .about-text .button a {
+        font-size: 14px;
+        padding: 6px 14px;
+        width: 100%;
+        max-width: 200px;
+    }
+    .mobile-button{
+        display: block;
+    }
+    .mobile-menu{
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        background-color: #200153;
+        min-height: 100vh;
+    }
+    .mobile-nav{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .mobile-nav-links link{
+        margin-bottom: 30px;
+        width: 210px;
+        height: 50px;
+    }
+    
+}
+
+/* Tablet adoptation */
+@media (min-width: 501px) and
+    (max-width: 960px){
+        body{
+            font-size: 16px;
+            padding: 0;
+            margin: 0;
+        }
+        .moving-planet,.cloud,.moving-moon{
+            display: none;
+        }
+        .navigation {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .nav-link {
+            display: none;
+            
+        }
+        .main-block {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 30px 20px;
+        }
+    
+        .main-block img {
+            width: 100px;
+            margin-bottom: 15px;
+        }
+    
+        .main-content h1 {
+            font-size: 28px;
+            margin-left: -70px;
+        }
+        .main-content{
+            max-width: 300px;
+
+        }
+        .main-subtitle {
+            margin-left: -85px;
+
+        }
+    
+        .about-block {
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            gap: 20px;
+            text-align: center;
+        }
+    
+        .about-card img {
+            width: 200px;
+            height: auto;
+        }
+    
+        .about-card p {
+            font-size: 16px;
+        }
+    
+        .skills-block {
+            padding: 20px;
+            text-align: center;
+        }
+    
+        .languages img {
+            width: 60px;
+            margin: 10px;
+        }
+    
+        .works {
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+    
+        .works img {
+            width: 90%;
+            max-width: 400px;
+            height: auto;
+        }
+    
+        .comments-block {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 25px;
+            padding: 20px;
+        }
+    
+        .pictures2 img {
+            width: 100px;
+            height: auto;
+        }
+    
+        footer {
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            text-align: center;
+            padding: 20px;
+        }
+    
+        .footer-links img {
+            width: 30px;
+            height: 30px;
+        }
+        .mobile-button{
+            display: block;
+        }
+        
+        .mobile-nav-links{
+            margin-left: 600px;
+
+        }
+    }
